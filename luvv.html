@@ -1,0 +1,1043 @@
+```html
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>HAI LUVV</title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Allura&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    /* =========================
+       BODY
+    ========================= */
+
+    html,
+    body {
+
+      margin: 0;
+      padding: 0;
+
+      width: 100%;
+      min-height: 100%;
+
+      font-family: 'Arial Black', sans-serif;
+
+      color: #660033;
+
+      overflow-x: hidden;
+
+    }
+
+
+    /* =========================
+       BACKGROUND VIDEO
+    ========================= */
+
+    .video-bg {
+
+      position: fixed;
+
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+
+      z-index: -2;
+
+      overflow: hidden;
+
+    }
+
+
+    .video-bg video {
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+    }
+
+
+    /* =========================
+       ANIMASI CONTAINER
+    ========================= */
+
+    @keyframes waveMotion {
+
+      0% {
+        transform: translateY(0px);
+      }
+
+      25% {
+        transform: translateY(-10px);
+      }
+
+      50% {
+        transform: translateY(0px);
+      }
+
+      75% {
+        transform: translateY(10px);
+      }
+
+      100% {
+        transform: translateY(0px);
+      }
+
+    }
+
+
+    /* =========================
+       CONTAINER UTAMA
+    ========================= */
+
+    .container {
+
+      position: relative;
+
+      background-color:
+        rgba(249, 198, 211, 0.8);
+
+      margin: 120px auto;
+
+      max-width: 600px;
+
+      padding: 30px;
+
+      border-radius: 20px;
+
+      box-shadow:
+        0 8px 16px rgba(0, 0, 0, 0.3);
+
+      text-align: center;
+
+      z-index: 1;
+
+      animation:
+        waveMotion 4s ease-in-out infinite;
+
+    }
+
+
+    /* =========================
+       JUDUL
+    ========================= */
+
+    .nama {
+
+      font-size: 36px;
+
+      font-weight: bold;
+
+      color: #cc2288;
+
+      font-family:
+        'Allura',
+        cursive;
+
+    }
+
+
+    /* =========================
+       VIDEO PROFIL
+    ========================= */
+
+    .foto-profil {
+
+      width: 280px;
+
+      height: auto;
+
+      max-height: 400px;
+
+      object-fit: contain;
+
+      border-radius: 15px;
+
+      margin-top: 20px;
+
+      border:
+        4px solid #660033;
+
+      display: block;
+
+      margin-left: auto;
+
+      margin-right: auto;
+
+      background: #fff;
+
+    }
+
+
+    /* =========================
+       ISI
+    ========================= */
+
+    .isi {
+
+      font-size: 18px;
+
+      margin-top: 20px;
+
+      white-space: pre-line;
+
+      line-height: 1.7;
+
+    }
+
+
+    /* =========================
+       EMOJI BACKGROUND
+    ========================= */
+
+    .emoji-bg {
+
+      position: fixed;
+
+      z-index: -1;
+
+      font-size: 60px;
+
+      opacity: 0.9;
+
+      text-shadow:
+        0 0 6px
+        rgba(255, 105, 180, 0.6);
+
+      pointer-events: none;
+
+    }
+
+
+    /* =========================
+       NAV BUTTON
+    ========================= */
+
+    .nav-button {
+
+      position: fixed;
+
+      padding:
+        10px 20px;
+
+      background:
+        rgba(255, 255, 255, 0.7);
+
+      color: #660033;
+
+      font-weight: bold;
+
+      border-radius: 12px;
+
+      text-decoration: none;
+
+      z-index: 10;
+
+      box-shadow:
+        0 4px 8px
+        rgba(0, 0, 0, 0.2);
+
+      transition:
+        background 0.3s;
+
+    }
+
+
+    .nav-button:hover {
+
+      background:
+        rgba(255, 255, 255, 1);
+
+    }
+
+
+    .nav-back {
+
+      top: 20px;
+
+      left: 20px;
+
+    }
+
+
+    .nav-next {
+
+      bottom: 20px;
+
+      right: 20px;
+
+    }
+
+
+    /* =========================
+       FOTO JATUH
+    ========================= */
+
+    .falling-photo {
+
+      position: fixed;
+
+      top: -200px;
+
+      z-index: 99999;
+
+      pointer-events: none;
+
+      object-fit: cover;
+
+      background: white;
+
+      padding: 6px;
+
+      border-radius: 8px;
+
+      box-shadow:
+        0 5px 20px
+        rgba(0, 0, 0, 0.35);
+
+      animation:
+        photoFall linear forwards;
+
+    }
+
+
+    @keyframes photoFall {
+
+      0% {
+
+        transform:
+          translateY(-200px)
+          rotate(-20deg)
+          scale(0.7);
+
+        opacity: 0;
+
+      }
+
+
+      10% {
+
+        opacity: 1;
+
+      }
+
+
+      50% {
+
+        transform:
+          translateY(50vh)
+          rotate(10deg)
+          scale(1);
+
+      }
+
+
+      100% {
+
+        transform:
+          translateY(120vh)
+          rotate(30deg)
+          scale(0.9);
+
+        opacity: 0;
+
+      }
+
+    }
+
+
+    /* =========================
+       PETUNJUK KLIK
+    ========================= */
+
+    .click-message {
+
+      position: fixed;
+
+      bottom: 25px;
+
+      left: 50%;
+
+      transform:
+        translateX(-50%);
+
+      z-index: 20;
+
+      background:
+        rgba(255, 255, 255, 0.75);
+
+      padding:
+        10px 20px;
+
+      border-radius: 20px;
+
+      font-size: 13px;
+
+      color: #660033;
+
+      pointer-events: none;
+
+      animation:
+        pulse 2s infinite;
+
+    }
+
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+
+        opacity: 0.7;
+
+      }
+
+      50% {
+
+        opacity: 1;
+
+      }
+
+    }
+
+
+    /* =========================
+       SAKURA
+    ========================= */
+
+    .sakura {
+
+      position: fixed;
+
+      top: -50px;
+
+      z-index: 9999;
+
+      animation:
+        jatuh 7s linear forwards;
+
+      pointer-events: none;
+
+      opacity: 0.9;
+
+    }
+
+
+    @keyframes jatuh {
+
+      to {
+
+        transform:
+          translateY(100vh)
+          rotate(360deg);
+
+        opacity: 0;
+
+      }
+
+    }
+
+
+    /* =========================
+       AUDIO
+    ========================= */
+
+    audio {
+
+      position: fixed;
+
+      bottom: 15px;
+
+      left: 15px;
+
+      width: 220px;
+
+      z-index: 10000;
+
+    }
+
+
+    /* =========================
+       HP
+    ========================= */
+
+    @media (max-width: 600px) {
+
+      .container {
+
+        width: 85%;
+
+        margin: 100px auto;
+
+        padding: 25px 20px;
+
+      }
+
+
+      .nama {
+
+        font-size: 32px;
+
+      }
+
+
+      .foto-profil {
+
+        width: 90%;
+
+        max-width: 280px;
+
+      }
+
+
+      .isi {
+
+        font-size: 15px;
+
+      }
+
+
+      .falling-photo {
+
+        padding: 4px;
+
+      }
+
+
+      audio {
+
+        width: 180px;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+       BACKGROUND VIDEO
+  ========================= -->
+
+  <div class="video-bg">
+
+    <video
+      autoplay
+      muted
+      loop
+      playsinline>
+
+      <source
+        src="luvluv.mp4"
+        type="video/mp4">
+
+    </video>
+
+  </div>
+
+
+  <!-- =========================
+       EMOJI BACKGROUND
+  ========================= -->
+
+  <div
+    class="emoji-bg"
+    style="top:30px;left:40px;">
+
+    🩷
+
+  </div>
+
+
+  <div
+    class="emoji-bg"
+    style="top:100px;right:60px;">
+
+    🪅
+
+  </div>
+
+
+  <div
+    class="emoji-bg"
+    style="bottom:120px;left:20px;">
+
+    📍
+
+  </div>
+
+
+  <div
+    class="emoji-bg"
+    style="bottom:60px;right:30px;">
+
+    🌸
+
+  </div>
+
+
+  <div
+    class="emoji-bg"
+    style="top:200px;left:80px;">
+
+    🌷
+
+  </div>
+
+
+  <div
+    class="emoji-bg"
+    style="top:250px;right:100px;">
+
+    🍥
+
+  </div>
+
+
+  <div
+    class="emoji-bg"
+    style="bottom:80px;left:150px;">
+
+    🌺
+
+  </div>
+
+
+  <div
+    class="emoji-bg"
+    style="top:50px;right:150px;">
+
+    🦩
+
+  </div>
+
+
+  <div
+    class="emoji-bg"
+    style="bottom:200px;left:220px;">
+
+    🪷
+
+  </div>
+
+
+  <div
+    class="emoji-bg"
+    style="bottom:30px;right:220px;">
+
+    🩷
+
+  </div>
+
+
+  <div
+    class="emoji-bg"
+    style="top:160px;left:200px;">
+
+    🍭
+
+  </div>
+
+
+  <div
+    class="emoji-bg"
+    style="top:90px;right:200px;">
+
+    🩰
+
+  </div>
+
+
+  <div
+    class="emoji-bg"
+    style="bottom:140px;left:100px;">
+
+    🩷
+
+  </div>
+
+
+  <div
+    class="emoji-bg"
+    style="top:300px;right:50px;">
+
+    🎈
+
+  </div>
+
+
+
+
+  <!-- =========================
+       KONTEN
+  ========================= -->
+
+  <div class="container">
+
+
+    <div class="nama">
+
+      <3
+
+    </div>
+
+
+    <!-- VIDEO PROFIL -->
+
+    <div>
+
+      <video
+        class="foto-profil"
+        autoplay
+        muted
+        loop
+        playsinline>
+
+        <source
+          src="alay.mp4"
+          type="video/mp4">
+
+      </video>
+
+    </div>
+
+
+    <!-- PESAN -->
+
+    <div class="isi">
+      Hi luvvv ♡
+
+This little thing is for you.
+
+I don't really know how to put
+everything I feel into words,
+so I made this instead.
+
+There's gonna be a lot of memories,
+a lot of pictures,
+and probably a little bit of me
+being cheesy hehe.
+
+Thank you for coming into my life,
+for all the laughs,
+the random moments,
+and everything we've been through.
+
+I hope you like it, luv. ♡
+
+
+I have something for you.
+
+    </div>
+
+
+  </div>
+
+
+  <!-- =========================
+       PETUNJUK
+  ========================= -->
+
+  <div class="click-message">
+
+    ✨ pencet akuu ✨
+
+  </div>
+
+
+  <!-- =========================
+       MUSIK
+  ========================= -->
+
+  <audio
+    id="musik"
+    autoplay
+    loop
+    controls>
+
+    <source
+      src="Jatuh Suka.mp3"
+      type="audio/mpeg">
+
+  </audio>
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================= -->
+
+  <script>
+
+
+    /* =========================
+       DAFTAR FOTO
+    ========================= */
+
+    const photos = [
+
+      "10.jpg",
+      "11.jpg",
+      "12.jpg",
+      "13.jpg",
+      "14.jpg",
+      "15.jpg",
+      "16.jpg",
+      "17.jpg",
+      "18.jpg",
+      "19.jpg",
+      "20.jpg",
+      "21.jpg"
+
+    ];
+
+
+    /* =========================
+       BUAT FOTO JATUH
+    ========================= */
+
+    function createFallingPhoto() {
+
+
+      const img =
+        document.createElement("img");
+
+
+      img.className =
+        "falling-photo";
+
+
+      /* FOTO RANDOM */
+
+      img.src =
+        photos[
+          Math.floor(
+            Math.random() *
+            photos.length
+          )
+        ];
+
+
+      /* POSISI RANDOM */
+
+      img.style.left =
+        Math.random() * 100 + "vw";
+
+
+      /* UKURAN RANDOM */
+
+      const size =
+        80 +
+        Math.random() * 100;
+
+
+      img.style.width =
+        size + "px";
+
+
+      img.style.height =
+        size * 1.25 + "px";
+
+
+      /* DURASI RANDOM */
+
+      const duration =
+        3 +
+        Math.random() * 4;
+
+
+      img.style.animationDuration =
+        duration + "s";
+
+
+      /* TAMBAHKAN */
+
+      document.body.appendChild(img);
+
+
+      /* HAPUS */
+
+      setTimeout(
+        () => {
+
+          img.remove();
+
+        },
+        (duration + 1) * 1000
+      );
+
+    }
+
+
+    /* =========================
+       KLIK → BANYAK FOTO
+    ========================= */
+
+    document.addEventListener(
+      "click",
+      function(event) {
+
+
+        /*
+          Kalau klik audio,
+          jangan munculkan foto
+        */
+
+        if (
+          event.target.closest("audio")
+        ) {
+
+          return;
+
+        }
+
+
+        /*
+          Kalau klik tombol home,
+          jangan munculkan foto
+        */
+
+        if (
+          event.target.closest(".nav-button")
+        ) {
+
+          return;
+
+        }
+
+
+        /*
+          BUAT 40 FOTO
+        */
+
+        for (
+          let i = 0;
+          i < 40;
+          i++
+        ) {
+
+          setTimeout(
+            createFallingPhoto,
+            i * 80
+          );
+
+        }
+
+      }
+    );
+
+
+    /* =========================
+       SAKURA JATUH
+    ========================= */
+
+    function createSakura() {
+
+
+      const sakura =
+        document.createElement("div");
+
+
+      sakura.classList.add(
+        "sakura"
+      );
+
+
+      sakura.innerText =
+        "🌸";
+
+
+      sakura.style.left =
+        Math.random() *
+        100 +
+        "vw";
+
+
+      sakura.style.fontSize =
+        Math.random() *
+        20 +
+        20 +
+        "px";
+
+
+      sakura.style.animationDuration =
+        5 +
+        Math.random() *
+        5 +
+        "s";
+
+
+      document.body.appendChild(
+        sakura
+      );
+
+
+      setTimeout(
+        () => {
+
+          sakura.remove();
+
+        },
+        10000
+      );
+
+    }
+
+
+    /*
+      Sakura muncul setiap 300ms
+    */
+
+    setInterval(
+      createSakura,
+      300
+    );
+
+
+    /* =========================
+       MUSIK
+       klik pertama bantu autoplay
+    ========================= */
+
+    const musik =
+      document.getElementById("musik");
+
+
+    document.addEventListener(
+      "click",
+      function() {
+
+        musik.play().catch(
+          () => {}
+        );
+
+      },
+      {
+        once: true
+      }
+    );
+
+  </script>
+
+
+</body>
+
+</html>
+```
